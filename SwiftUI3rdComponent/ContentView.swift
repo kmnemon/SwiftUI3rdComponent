@@ -12,8 +12,11 @@ struct ContentView: View {
         VStack {
             NavigationStack{
                 List{
-                    NavigationLink("WebViewComponent"){
+                    NavigationLink("WebViewComponent") {
                         WebViewComponent()
+                    }
+                    NavigationLink("ConfigView") {
+                        ConfigView()
                     }
                 }
                 .navigationTitle("Choose Component")

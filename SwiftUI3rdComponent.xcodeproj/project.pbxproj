@@ -13,6 +13,8 @@
 		8AACE4302C0C0B6100407868 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AACE42F2C0C0B6100407868 /* Preview Assets.xcassets */; };
 		8AACE4382C0C0BC400407868 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 8AACE4372C0C0BC400407868 /* Ink */; };
 		8AC4FC082C0C0F2F0025209B /* WebViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4FC072C0C0F2F0025209B /* WebViewComponent.swift */; };
+		8AC4FC0E2C0F0CD60025209B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4FC0D2C0F0CD60025209B /* Configuration.swift */; };
+		8AC4FC102C0F0FD10025209B /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4FC0F2C0F0FD10025209B /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		8AACE42C2C0C0B6100407868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AACE42F2C0C0B6100407868 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AC4FC072C0C0F2F0025209B /* WebViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewComponent.swift; sourceTree = "<group>"; };
+		8AC4FC0A2C0EB17D0025209B /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		8AC4FC0B2C0EE31E0025209B /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		8AC4FC0C2C0F01720025209B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8AC4FC0D2C0F0CD60025209B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		8AC4FC0F2C0F0FD10025209B /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,8 @@
 		8AACE4272C0C0B6000407868 /* SwiftUI3rdComponent */ = {
 			isa = PBXGroup;
 			children = (
+				8AC4FC0C2C0F01720025209B /* Info.plist */,
+				8AC4FC092C0EB1430025209B /* Shared */,
 				8AC4FC062C0C0E900025209B /* Component */,
 				8AACE4282C0C0B6000407868 /* SwiftUI3rdComponentApp.swift */,
 				8AACE42A2C0C0B6000407868 /* ContentView.swift */,
@@ -76,8 +85,19 @@
 			isa = PBXGroup;
 			children = (
 				8AC4FC072C0C0F2F0025209B /* WebViewComponent.swift */,
+				8AC4FC0F2C0F0FD10025209B /* ConfigView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		8AC4FC092C0EB1430025209B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4FC0A2C0EB17D0025209B /* Development.xcconfig */,
+				8AC4FC0B2C0EE31E0025209B /* Production.xcconfig */,
+				8AC4FC0D2C0F0CD60025209B /* Configuration.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC4FC082C0C0F2F0025209B /* WebViewComponent.swift in Sources */,
+				8AC4FC102C0F0FD10025209B /* ConfigView.swift in Sources */,
 				8AACE42B2C0C0B6000407868 /* ContentView.swift in Sources */,
+				8AC4FC0E2C0F0CD60025209B /* Configuration.swift in Sources */,
 				8AACE4292C0C0B6000407868 /* SwiftUI3rdComponentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +189,7 @@
 /* Begin XCBuildConfiguration section */
 		8AACE4312C0C0B6100407868 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC4FC0A2C0EB17D0025209B /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -230,6 +253,7 @@
 		};
 		8AACE4322C0C0B6100407868 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC4FC0B2C0EE31E0025209B /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -295,6 +319,7 @@
 				DEVELOPMENT_TEAM = 62DH2Z26V5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUI3rdComponent/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +349,7 @@
 				DEVELOPMENT_TEAM = 62DH2Z26V5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUI3rdComponent/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

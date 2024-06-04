@@ -1,0 +1,11 @@
+//
+//  Production.xcconfig
+//  SwiftUI3rdComponent
+//
+//  Created by ke on 2024/6/4.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = api.production.com
